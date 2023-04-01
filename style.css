@@ -1,3 +1,26 @@
-body {
-    background-color: rgb(210, 244, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  background: url("https://shib.ucmerced.edu/idp/images/SSO-background-background.png");
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: lightgrey;
+  width: 30rem;
+  height: 32rem;
+  padding: 15px;
+  border-radius: 1rem;
+}
+
+input {
+  height: 2rem;
+  border-radius: .2rem;
+}
+
+.icon-signIn {
+  width: 8em;
+  height: 8em;
 }
