@@ -9,12 +9,21 @@
 <body>
     <div class="container">
         <img class="icon-signIn" src="http://www.clker.com/cliparts/w/A/H/p/3/G/library-logo-md.png" alt="">
-        <p>Username</p>
-        <input type="text">
-        <p>Password</p>
-        <input type="text">
-        <input type="checkbox">Remember me</input>
-        <button>Login</button>
+       <forum class="login" action="/landing.html" method="GET">
+        <div class="form-items">
+            <p>Username</p>
+            <input type="text" id="username" required>
+            <p class="password">Password</p>
+            <input type="text" required>
+            <div class="check">
+                <input class="box" type="checkbox">Remember me</input>
+            </div>
+            <button type="submit">Login</button>
+            
+       </forum> 
+        
+          </div>  
     </div>
+    <script src="index.js"></script>
 </body>
 </html>
