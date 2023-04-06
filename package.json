@@ -11,5 +11,23 @@
   "devDependencies": {
     "nodemon": "^2.0.22",
     "sequelize-cli": "^6.6.0"
-  }
+  },
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "name": "ouramazingbookstore",
+  "version": "1.0.0",
+  "main": "db.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QLopes22/ourAmazingBookStore.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/QLopes22/ourAmazingBookStore/issues"
+  },
+  "homepage": "https://github.com/QLopes22/ourAmazingBookStore#readme",
+  "description": ""
 }
