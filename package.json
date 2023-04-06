@@ -4,6 +4,7 @@
     "express-es6-template-engine": "^2.2.3",
     "pg": "^8.10.0",
     "pg-hstore": "^2.3.4",
+    "pg-promise": "^11.4.3",
     "sequelize": "^6.30.0",
     "sqlite3": "^5.1.6"
   },
