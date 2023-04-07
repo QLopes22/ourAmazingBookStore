@@ -42,6 +42,18 @@ app.get('/allbooks', async (req, res) => {
     // res.render('allbooks', {bookList});
 });
 
+app.get('/bookinfo/:id', async (req, res) => {
+    const {id} =  req.params
+    const booksData = await books.findOne({
+        where:{
+            id:id
+        }
+    })
+    res.render('bookinfo', {
+        locals: {book:booksData}
+    });
+});
+
 server.listen(port, hostname, () => {
     console.log(`Server running at http://${hostname}:${port}/`);
 });
