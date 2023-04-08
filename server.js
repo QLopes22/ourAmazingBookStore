@@ -36,8 +36,8 @@ app.get('/API/Books', async (req, res) => {
 app.get('/', (req, res) => {
     res.render('home');
 });
-app.get('/allbooks', async (req, res) => {
-    res.render('allbooks')
+app.get('/landing', async (req, res) => {
+    res.render('landing')
     // let bookList = await books.findAll()
     // res.render('allbooks', {bookList});
 });
