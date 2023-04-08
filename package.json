@@ -13,7 +13,8 @@
     "sequelize-cli": "^6.6.0"
   },
   "scripts": {
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "start": "node server.js"
   },
   "name": "ouramazingbookstore",
   "version": "1.0.0",
