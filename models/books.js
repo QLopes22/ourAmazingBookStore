@@ -10,7 +10,10 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      books.belongsToMany(models.User, {
+        through: models.favoritebooks
+      })
+
     }
   }
   books.init({
@@ -18,7 +21,7 @@ module.exports = (sequelize, DataTypes) => {
     author: DataTypes.STRING,
     publish_date: DataTypes.INTEGER,
     genre: DataTypes.ARRAY(Sequelize.STRING),
-    description: DataTypes.STRING
+    description: DataTypes.STRING,
   }, {
     sequelize,
     modelName: 'books',
