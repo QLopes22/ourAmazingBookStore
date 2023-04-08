@@ -10,7 +10,7 @@ body {
 }
 
 .profile-container {
-    /* position: sticky; */
+    position: fixed;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -39,7 +39,7 @@ ul {
     display: flex;
     justify-content:start;
     gap: 1rem;
-    margin-left: 5rem;
+    margin-left: 20rem;
     padding: 2rem;
     background-color: lightgrey;
     border-radius: 1rem;
