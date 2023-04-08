@@ -1,5 +1,5 @@
 // const buttonClick = document.getElementById("show_books")
-const bookCard = document.querySelector(".card-container")
+const bookCard = document.querySelector(".book-container")
 
  function fetchBooks() {
     fetch(`http://127.0.0.1:3000/API/Books`)
@@ -7,12 +7,11 @@ const bookCard = document.querySelector(".card-container")
     .then(data => 
         bookCard.innerHTML = data.map((bookname => {
             return `<div class="card" style="width: 18rem;">
-            <img src="/book_images/${bookname.id}.jpeg" class="card-img-top" alt="${bookname.title}">
+            <img src="/book_images/${bookname.id}.jpeg" class="card-img-top" alt="${bookname.title} covertart">
             <div class="card-body">
-            <h5 class="card-title">${bookname.title}</h5>
-            </div>
-            <div class="card-body">
-            <a href="/bookinfo/${bookname.id}" class="card-link">Learn more</a>
+            <p class="card-text">${bookname.title}</p>
+            <a href="#"><button>Read More</button></a>
+            <a href="#"><button>Favorite</button></a>
             </div>
             </div>`
             })).join('')
