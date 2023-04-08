@@ -1,5 +1,5 @@
 body {
-    /* background: url("https://shib.ucmerced.edu/idp/images/SSO-background-background.png"); */
+    background: url("https://shib.ucmerced.edu/idp/images/SSO-background-background.png");
 
 }
 
@@ -11,23 +11,48 @@ body {
 }
 
 .profile-container {
+    position: sticky;
     display: flex;
     flex-direction: column;
     text-align: center;
     padding-top: 20px;
-    background-color: blue;
+    background-color: lightgrey;
     width: 15rem;
     height: 22rem;
-    /* border-radius: 10%; */
+    border-radius: 1rem;
 }
+
+ul {
+    list-style: none;
+}
+
+.profile-name {
+    font-size: 1.5rem;
+}
+
 
 .icon {
     border-radius: 50%;
 }
 
 .book-container {
-    display: flex;   
+    display: flex;
+    max-width: 100vh;
+    flex-wrap: wrap;   
     justify-content: space-between;
     margin-left: 25rem;
+    padding: 1rem;
+    background-color: lightgrey;
     /* width: 50rem; */
+}
+
+button {
+    background-color: ##A3A3BF;
+    border-radius: 1rem;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
 }
