@@ -1,0 +1,33 @@
+body {
+    /* background: url("https://shib.ucmerced.edu/idp/images/SSO-background-background.png"); */
+
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50rem;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 20px;
+    background-color: blue;
+    width: 15rem;
+    height: 22rem;
+    /* border-radius: 10%; */
+}
+
+.icon {
+    border-radius: 50%;
+}
+
+.book-container {
+    display: flex;   
+    justify-content: space-between;
+    margin-left: 25rem;
+    /* width: 50rem; */
+}
