@@ -9,6 +9,7 @@ const express = require('express');
 const app = express();
 const { Sequelize } = require("sequelize");
 const { User, books } = require("./models")
+const { getJoinedFavorites, getJoinedReviews } = require("./joins/joins");
 const sequelize = new Sequelize(`postgres://postgres@localhost:5432/bookstore_project`);
 
 const es6Renderer = require('express-es6-template-engine');
@@ -41,6 +42,20 @@ app.get('/allbooks', async (req, res) => {
     // let bookList = await books.findAll()
     // res.render('allbooks', {bookList});
 });
+
+app.get('/favorites/:id', async (req, res) => {
+    const {id} = req.params;
+    const favorites = await getJoinedFavorites(id);
+    console.log(favorites)
+    res.send(favorites);
+});
+
+app.get('/reviews/:id', async (req, res) => {
+    const {id} = req.params;
+    const reviews = await getJoinedReviews(id);
+    console.log(reviews)
+    res.send(reviews);
+})
 
 app.get('/bookinfo/:id', async (req, res) => {
     const {id} =  req.params
