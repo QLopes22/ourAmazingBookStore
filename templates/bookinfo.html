@@ -1,22 +1,47 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Profile</title>
+    <link rel="stylesheet" href="css/landing.css">
 </head>
 <body>
-    <img src="/book_images/${book.id}.jpeg" alt="${book.title} coverart" width="150px" height="200px">
-    <br>
-    <h3>
-    Info about ${book.title}
-    <br>
-    Author: ${book.author}
-    <br>
-    Released: ${book.publish_date}
-    <br>
-    Description: ${book.description}
-    </h3>
+  <div class="main-container">
+    <div class="profile-container">
+        <div class="profile-content">
+            <img class="icon" src="https://static.vecteezy.com/system/resources/thumbnails/005/544/718/small/profile-icon-design-free-vector.jpg" alt="">
+            <p class="profile-name">Dirty Dan</p>
+            <p class="favorites"><a href="">All Books</a></p>
+        </div>
+    </div>
+    <div class="book-container">
+            <div class="card" style="width: 18rem;">
+                <img src="https://images.unsplash.com/photo-1621351183012-e2f9972dd9bf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8Ym9vayUyMGNvdmVyfGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <button>Read</button>
+                  <button>Checkout</button>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Ym9vayUyMGNvdmVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <button>Read</button>
+                  <button>Checkout</button>
+                </div>
+              </div>
+              <div class="card book1" style="width: 18rem;">
+                <img src="https://images.unsplash.com/photo-1592496431122-2349e0fbc666?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Ym9vayUyMGNvdmVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <button>Read</button>
+                  <button>Checkout</button>
+                </div>
+              </div>
+    </div>
+  </div>
+  <script src="/scripts/landing.js"></script>
 </body>
 </html>
