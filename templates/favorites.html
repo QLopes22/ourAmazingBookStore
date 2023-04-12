@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="../css/favorites.css">
+</head>
+<body>
+  <div class="main-container">
+    <div class="profile-container">
+        <div class="profile-content">
+            <img class="icon" src="https://static.vecteezy.com/system/resources/thumbnails/005/544/718/small/profile-icon-design-free-vector.jpg" alt="">
+            <p class="profile-name">${user.firstName}'s <br> Favorite Books</p>
+            <p class="favorites"><a href="/landing/${user.id}">All Books</a></p>
+        </div>
+    </div>
+    <div class="book-container">
+      ${favoritedBooks.map(book => `<div class="card" style="width: 18rem;">
+        <img src="/book_images/${book.id}.jpeg" class="card-img-top" alt="${book.title} covertart">
+        <div class="card-body">
+        <p class="card-text">${book.title}</p>
+        <a href="#"><button>Read More</button></a>
+        <button><a href="http://127.0.0.1:3000/removeFromFavorites/${book.id}/${user.id}">Remove from Favorites</a></button>
+        </div>
+        </div>`).join('')}
+      
+    </div>
+  </div>
+  <!-- <script src="/scripts/favorites.js"></script> -->
+</body>
+</html>
