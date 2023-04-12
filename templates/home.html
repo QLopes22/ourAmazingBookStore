@@ -12,16 +12,20 @@
        <forum class="login" action="/landing.html" method="GET">
         <div class="form-items">
             <p>Username</p>
-            <input type="text" id="username" required>
+            <select class="username" name="user_name" id="username">
+                <option value="blank"></option>
+                <!-- <option value="">Marcel</option> -->
+            </select>
+            <!-- <input type="text" id="username" required> -->
             <p class="password">Password</p>
             <input type="password" required>
             <div class="check">
                 <input class="box" type="checkbox">Remember me</input>
             </div>
-            <a href="landing"><button type="submit">Login</button></a>
+            <button type="submit" id="login_button">Login</button>
        </forum>
           </div>
     </div>
-    <script src="/scripts/index.js"></script>
+    <script src="/scripts/home.js"></script>
 </body>
 </html>

@@ -10,13 +10,18 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      User.belongsToMany(models.books, {
+        through: models.favoritebooks,
+        foreignKey: `userid`,
+        otherKey: `bookid`,
+      })
     }
   }
   User.init({
     firstName: DataTypes.STRING,
     lastName: DataTypes.STRING,
     userName: DataTypes.STRING,
+    favorites: DataTypes.ARRAY(Sequelize.STRING)
   }, {
     sequelize,
     modelName: 'User',

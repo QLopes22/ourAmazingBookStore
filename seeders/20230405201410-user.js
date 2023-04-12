@@ -4,10 +4,10 @@
 module.exports = {
   async up (queryInterface, Sequelize) {
     await queryInterface.bulkInsert('Users', [{
-      firstName: 'Marc',
+      firstName: 'Marcel',
       lastName: 'Hughes',
       userName: 'marcellondon',
-      favorites: ["Fifty Shades of Grey"],
+      favorites: ["Fifty Shades of Grey","2"],
       createdAt: new Date(),
       updatedAt: new Date()
     }], {});
