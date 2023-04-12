@@ -115,6 +115,20 @@ app.get('/favorites/:id', async (req, res) => {
     });
 });
 
+app.get('/favorites/:id', async (req, res) => {
+    const {id} = req.params;
+    const favorites = await getJoinedFavorites(id);
+    console.log(favorites)
+    res.send(favorites);
+});
+
+app.get('/reviews/:id', async (req, res) => {
+    const {id} = req.params;
+    const reviews = await getJoinedReviews(id);
+    console.log(reviews)
+    res.send(reviews);
+})
+
 app.get('/bookinfo/:id', async (req, res) => {
     const {id} =  req.params
     const booksData = await books.findOne({
